@@ -1,17 +1,21 @@
 package models;
 
-public class Client extends User{
-    Inventory inventory;
+import java.util.ArrayList;
 
-    public Client(String identification, String name, String email, String password, Inventory inventory) {
+public class Client extends User{
+    private Inventory inventory;
+    private ArrayList<Purchase> purchases;
+
+    public Client(String identification, String name, String email, String password) {
         super(identification, name, email, password);
-        this.inventory = inventory;
+        this.inventory = new Inventory();
+        this.purchases = new ArrayList<>();
     }
     public Inventory getInventory() {
         return inventory;
     }
 
-    public void setInventory(Inventory inventory) {
-        this.inventory = inventory;
+    public ArrayList<Purchase> getPurchases() {
+        return purchases;
     }
 }

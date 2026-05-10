@@ -5,6 +5,4 @@ public class SealedProduct extends Product{
         super(identification, name, price);
 
     }
-
-
 }

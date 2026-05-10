@@ -13,7 +13,6 @@ public class User {
         this.password = password;
     }
 
-
     public String getIdentification() {
         return identification;
     }
