@@ -7,4 +7,11 @@ public class Client extends User{
         super(identification, name, email, password);
         this.inventory = inventory;
     }
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
 }
