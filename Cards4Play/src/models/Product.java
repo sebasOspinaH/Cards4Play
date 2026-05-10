@@ -15,10 +15,6 @@ public class Product {
         return identification;
     }
 
-    public void setIdentification(String identification) {
-        this.identification = identification;
-    }
-
     public String getName() {
         return name;
     }
