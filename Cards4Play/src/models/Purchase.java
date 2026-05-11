@@ -7,11 +7,13 @@ public class Purchase {
     private String id;
     private String date;
     private ArrayList<Product> products;
+    private Client client;
 
     public Purchase(String id, String date, Client client) {
         this.id = id;
         this.date = date;
         this.products = new ArrayList<>();
+        this.client = client;
     }
 
     public String getId() {
@@ -33,4 +35,7 @@ public class Purchase {
     public ArrayList<Product> getProducts() {
         return products;
     }
-}
+    public Client getClient(){
+        return this.client;
+    }
+} 
