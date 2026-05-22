@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  cards4play:
+    build: .
+    container_name: cards4play-api
+    ports:
+      - "8080:8080"
+    volumes:
+      # Persistencia de datos entre reinicios del contenedor
+      - cards4play-data:/app/data
+    environment:
+      - PORT=8080
+      - DATA_PATH=/app/data/state.json
+    restart: unless-stopped
+
+volumes:
+  cards4play-data:
