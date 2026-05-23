@@ -4,11 +4,11 @@ FROM maven:3.9.16-eclipse-temurin-25 AS builder
 WORKDIR /app
 
 # Copiar pom primero para cachear dependencias
-COPY pom.xml .
+COPY Cards4Play/pom.xml .
 RUN mvn dependency:go-offline -q
 
 # Copiar código fuente y compilar fat JAR
-COPY src ./src
+COPY Cards4Play/src ./src
 RUN mvn package -q -DskipTests
 
 # ── Stage 2: Runtime ─────────────────────────────────────────────────
